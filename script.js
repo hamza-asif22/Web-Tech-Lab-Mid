@@ -30,22 +30,4 @@ function add() {
     text.className = "faq-text";
     text.appendChild(document.createTextNode(answerInput));
   
-    var toggleBtn = document.createElement("button");
-    toggleBtn.className = "faq-toggle";
-    toggleBtn.innerHTML =
-      '<i class="fas fa-chevron-down"></i><i class="fas fa-times"></i>';
-  
-    newFaq.appendChild(title);
-    newFaq.appendChild(text);
-    newFaq.appendChild(toggleBtn);
-  
-    var faqContainer = document.querySelector(".faq-container");
-    faqContainer.appendChild(newFaq);
-  
-    toggleBtn.addEventListener("click", function () {
-      toggleDetails(newFaq);
-    });
-  
-    document.getElementById("question").value = "";
-    document.getElementById("answer").value = "";
   }
